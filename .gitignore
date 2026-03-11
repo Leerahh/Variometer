@@ -1,0 +1,76 @@
+# ---------------------------
+# Compiled object files
+# ---------------------------
+*.o
+*.obj
+
+# ---------------------------
+# Static and shared libraries
+# ---------------------------
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# ---------------------------
+# Executables
+# ---------------------------
+*.exe
+*.out
+*.app
+
+# ---------------------------
+# Build directories
+# ---------------------------
+build/
+bin/
+out/
+target/
+
+# ---------------------------
+# CMake
+# ---------------------------
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# ---------------------------
+# Autotools
+# ---------------------------
+aclocal.m4
+autom4te.cache/
+configure
+config.log
+config.status
+libtool
+m4/
+
+# ---------------------------
+# Logs
+# ---------------------------
+*.log
+
+# ---------------------------
+# Temporary files
+# ---------------------------
+*.tmp
+*.swp
+*.swo
+*~
+
+# ---------------------------
+# OS files
+# ---------------------------
+.DS_Store
+Thumbs.db
+
+# ---------------------------
+# IDE / Editor
+# ---------------------------
+.vscode/
+.idea/
+*.iml
+
