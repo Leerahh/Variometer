@@ -17,9 +17,9 @@ The purpose of the Pressure Sensing Sub-system is to measure the ambient atmosph
 
 DPS310 Digital Pressure Sensor
 **Measurement Performance**
-- Operation range: Pressure: 300-1200 hPa, Temperature -30 - 60 °C
-- Pressure resolution: ≤ 0.01 hPa 
-- Relative accuracy:  ≤ ±0.1 hPa
+- Operation range: Pressure: 300-1200 hPa, Temperature -20 - 60 °C
+- Pressure resolution: ≤ 0.01 hPa  (or ≤ 0.08 m)
+- Relative accuracy:  ≤ ±0.1 hPa (or ≤ ± 0.8 m)
 **Sampling / Timing**:
 - Output data rate (ODR)  ≥ 25 Hz
 - Measurement mode: Continuous measurement mode required
@@ -35,10 +35,29 @@ DPS310 Digital Pressure Sensor
 ### 2.2 Output sub system
 
 #### 2.2.1 Purpose
-
-Audio for the users and LED dubugging interface. 
+The purpose of the Output Sub-system is to provide real-time feedback to the user. This includes acoustic signals indicating vertical motion (climb/sink) and visual feedback via LEDs for debugging and system status indication.
 #### 2.2.2 Requirments
 SP-2209
+**Acoustic Output
+- Sound generation: audible tones corresponding to vertical speed
+- Audible range approx. 1kHz - 5 kHz
+- Signal type : PWM-driven audio signal from MCU
+**Electrical Characteristics**
+- Compatible with 3.0 V system supply
+- Should not exceed system power budget
+**Control Requirements 
+- Audio control: The output shall be controllable via PWM signal
+- Response time: Audio feedback shall reflect vertical speed changes with latency ≤ 100 ms
+**Mechanical / Integration**
+- Speaker mounting: Speaker shall be securely mounted in enclosure
+- Environmental considerations: Output shall remain audible in outdoor conditions (wind, flight noise)
+
+**LED Debug Interface**
+- Functionality : LEDs shall indicate system states (e.g. power, sensor activity, error states)
+- Control : Individually controllable via GPIO
+- Visibility: Clearly visible under daylight conditions
+- Power consumption: Minimized using current-limiting resistors and duty cycling
+
 
 ### 2.3. Processing sub-system
 
