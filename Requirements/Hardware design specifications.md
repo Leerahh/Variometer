@@ -83,10 +83,24 @@ Minimum Requirements for STM32
 	• A single 3.0V via LDO is a good first approximation
 	• Separate stabilization capacitors at all VCC pins (100nF)
 ### 2.4 power subsystem
+
 #### 2.4.1 Purpose
-We need a reliable long-lasting power system. 
+The purpose of the Power Management Sub-system is to provide a stable and efficient power supply to all components of the variometer system
 #### 2.4.2 Requirements
-HP4555
+**Functional Requirements**
+
+- The subsystem shall supply stable regulated voltage to all system components.
+- The subsystem shall support battery-powered operation.
+
+**Power Requirements**
+
+- The subsystem shall operate with a low power consumption suitable for portable use.
+- The subsystem shall support the voltage levels required by the STM32L4/L4+ microcontroller and pressure sensor.
+
+For **STM32L4/L4+ microcontroller**  require a 1.71 V to 3.6 V operatingvoltage supply (VDD). Several independent supplies (VDDA, VDDIO2, VDDUSB, VLCD(b), VDDDSI), can be provided for specific peripherals. 
+All the specifications for the supplies are in the application note AN4555 page 7/55. 
+
+For the pressure sensor ...................
 
 ###  2.5 Storage subsystem 
 
