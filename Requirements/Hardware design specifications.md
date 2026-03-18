@@ -16,6 +16,21 @@ The purpose of the Pressure Sensing Sub-system is to measure the ambient atmosph
 #### 2.1.2 Requirments
 
 DPS310 Digital Pressure Sensor
+**Measurement Performance**
+- Operation range: Pressure: 300-1200 hPa, Temperature -30 - 60 °C
+- Pressure resolution: ≤ 0.01 hPa 
+- Relative accuracy:  ≤ ±0.1 hPa
+**Sampling / Timing**:
+- Output data rate (ODR)  ≥ 25 Hz
+- Measurement mode: Continuous measurement mode required
+- Latency: Measurement time ≤ 30 ms in high precision mode
+**Interface**
+- Communication interface : I²C or SPI
+**Power Supply 
+- Supply voltage 1.7 V - 3.6 V
+- Power consumption: 
+	- ≤ 10 µA average during operation
+	- Low-power standby mode required
 
 ### 2.2 Output sub system
 
