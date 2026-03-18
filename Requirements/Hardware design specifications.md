@@ -7,7 +7,7 @@ This document focuses on the hardware architecture and design considerations of 
 
 ## 2. System desing
 
-### 2.1 Presuare Sensing Sub-system
+### 2.1 Pressure Sensing Sub-system
 
 #### 2.1.1 Purpose 
 
@@ -15,11 +15,11 @@ The purpose of the Pressure Sensing Sub-system is to measure the ambient atmosph
 
 #### 2.1.2 Requirments
 
-### 2.2 Audio sub system
+### 2.2 Output sub system
 
 #### 2.2.1 Purpose
 
-The purpose of the Processing Sub-system is to acquire, process, and interpret the sensor data required for the operation of the variometer.
+Audio for the users and LED dubugging interface. 
 #### 2.2.2 Requirments
 
 ### 2.3. Processing sub-system
@@ -32,14 +32,14 @@ The purpose of the Audio Sub-system is to provide acoustic feedback to the parag
 #### 2.3.2 Requirments
 
 
-### powee subsystem
+### power subsystem
 
-### data logger subsystem 
+### Storage subsystem 
 
 1. select the sensors with beapers maybe 
 
-#### uswe interface subsystem
+#### user interface subsystem
 
 lds in this subsystem 
 
-modules are hardware and sortware 
+modules are hardware and software 
