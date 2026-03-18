@@ -3,7 +3,7 @@
 This document describes the hardware design specification of a variometer intended for paragliding applications, implemented using microcontrollers from the STM32L4 Series and STM32L4+ Series. The variometer measures changes in atmospheric pressure to determine the rate of climb or descent, providing real-time feedback to the pilot during flight.
 The hardware development is based on the guidelines provided in the application note AN4555, which describes the minimum hardware resources required for STM32L4/L4+ microcontroller systems. These recommendations are used to ensure reliable operation, low power consumption, and proper integration of the microcontroller within the embedded system.
 The variometer hardware platform integrates several key components, including a barometric pressure sensor, the STM32L4 microcontroller, power management circuitry, and user interface elements such as display and audio indicators. The pressure sensor provides high-resolution atmospheric pressure measurements that are processed by the microcontroller to calculate the vertical speed.
-This document focuses on the hardware architecture and design considerations of the system. The different board features that require sensor integration, such as the pressure sensing interface, power supply connections, and communication interfaces, will be described in detail throughout this Hardware Design Specification.
+This document focuses on the hardware architecture and design considerations of the system. The different board features that require sensor integration, such as the pressure sensing interface, peower supply connections, and communication interfaces, will be described in detail throughout this Hardware Design Specification.
 
 ## 2. System desing
 
@@ -32,4 +32,14 @@ The purpose of the Audio Sub-system is to provide acoustic feedback to the parag
 #### 2.3.2 Requirments
 
 
+### powee subsystem
 
+### data logger subsystem 
+
+1. select the sensors with beapers maybe 
+
+#### uswe interface subsystem
+
+lds in this subsystem 
+
+modules are hardware and sortware 
