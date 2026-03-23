@@ -106,11 +106,11 @@ For the pressure sensor ...................
 
 #### 2.4.4 Main Components
 
-###  2.5 Storage subsystem 
+####  2.5 Storage subsystem 
 
-### 2.4.5 Protection and Monitoring
+#### 2.4.5 Protection and Monitoring
 
-### 2.4.6 Open Design Decisions
+#### 2.4.6 Open Design Decisions
 
 1. select the sensors with beapers maybe 
 
