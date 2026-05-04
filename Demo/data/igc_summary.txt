@@ -1,0 +1,21 @@
+IGC conversion summary
+======================
+Samples          : 23723
+Duration         : 23722 s  (395 min 22 s)
+Pressure range   : 638.3 – 915.6 hPa
+Max climb rate   : 0.76 hPa/s  (pressure falling)
+Max descent rate : 0.77 hPa/s  (pressure rising)
+
+Recommended #defines for main.c
+--------------------------------
+#define VARIO_DEADBAND_HPA   0.020f
+#define GREEN_BLINK_MIN_MS   80u
+#define GREEN_BLINK_MAX_MS   800u
+#define CLIMB_SCALE_HPA      0.50f
+#define RED_ON_MIN_MS        500u
+#define RED_ON_MAX_MS        1500u
+#define RED_OFF_MS           200u
+
+Note: CLIMB_SCALE_HPA is set to 1.5x the 90th-percentile rate so
+the LEDs respond visibly to most of the flight without saturating.
+Increase it if the LED always blinks at maximum speed.
