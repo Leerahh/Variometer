@@ -74,3 +74,21 @@ Thumbs.db
 .idea/
 *.iml
 
+# Build output
+Debug/
+Release/
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+*.d
+*.su
+
+# CubeIDE / Eclipse
+.settings/
+*.launch
+
+# Optional backups
+*.bak
+
