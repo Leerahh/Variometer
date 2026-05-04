@@ -23,7 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "stm32l4xx_nucleo_144.h"
 #include <math.h>
-#include <pressure_data.h>
+#include <flights.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,17 +33,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-/* Variometer configuration */
-/*LED1 - Green*/
-#define VARIO_DEADBAND_HPA  0.05f   /* ignore changes smaller than this */
-#define LED1_BLINK_MIN_MS        80u     /* fastest green blink  */
-#define LED1_BLINK_MAX_MS        800u    /* slowest green blink  */
-#define CLIMB_SCALE_HPA     2.0f    /* hPa/s = max climb rate */
 
-/*LED3 - Red */
-#define LED3_ON_MIN_MS        500u    /* ON time for slowest descent */
-#define LED3_ON_MAX_MS        1500u   /* ON time for fastest descent */
-#define LED3_OFF_MS           200u    /* fixed short gap between pulses */
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -54,6 +44,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+static const Flight *flight = &CURRENT_FLIGHT;  /* selected at compile time */
 static uint32_t sample_index    = 0;
 static uint32_t last_sample_tick = 0;
 static uint32_t last_blink_tick  = 0;
@@ -151,13 +142,13 @@ int main(void)
 
 	              if (sample_index > 0) {
 	                  /* pressure drops when climbing: rate negative = ascending */
-	                  float delta = pressure_hPa[sample_index]
-	                              - pressure_hPa[sample_index - 1];
+	                  float delta = flight->data[sample_index]
+								           - flight->data[sample_index - 1];
 	                  current_rate_hpa = delta; /* hPa/s, sign retained */
 	              }
 
 	              sample_index++;
-	              if (sample_index >= PRESSURE_SAMPLES) {
+	              if (sample_index >= flight->length) {
 	                  sample_index = 1;   /* loop, keep previous sample valid */
 	              }
 	          }

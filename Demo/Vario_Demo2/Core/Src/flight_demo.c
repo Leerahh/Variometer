@@ -1,4 +1,4 @@
-#include "pressure_data.h"
+#include "flights.h"
 
 /* 60-second demo profile — designed to show gradual speed changes.
  * Each entry = 1 second. Negative delta = climb, positive = descent.
@@ -16,7 +16,7 @@
  * 45-49s  fast→slow descent (+1.8 to +0.1 hPa/s ramping down)
  * 50-59s  stable landing   (~0.00 hPa/s) — then loops
  */
-const float pressure_hPa[PRESSURE_SAMPLES] = {
+const float _data_demo[] = {
     /* 0-4: stable */
     950.00f, 950.01f, 949.99f, 950.00f, 950.01f,
 
@@ -46,4 +46,9 @@ const float pressure_hPa[PRESSURE_SAMPLES] = {
     /* 50-59: stable landing */
     950.00f, 950.01f, 949.99f, 950.00f, 950.01f,
     950.00f, 949.99f, 950.01f, 950.00f, 950.00f
+};
+
+const Flight flight_demo = {
+    .data   = _data_demo,
+    .length = sizeof(_data_demo) / sizeof(_data_demo[0])
 };
